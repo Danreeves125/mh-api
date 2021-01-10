@@ -3,10 +3,8 @@ class MhApi {
 
     }
 
-
-
-    async getAilments(ailment = '') {
-        const ailmentsResponse = await fetch(`https://mhw-db.com/ailments/${ailment}`);
+    async getAilments() {
+        const ailmentsResponse = await fetch(`https://mhw-db.com/ailments`);
 
         const ailmentsData = await ailmentsResponse.json();
 

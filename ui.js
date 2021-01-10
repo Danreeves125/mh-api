@@ -1,7 +1,36 @@
 class Ui {
-    constructor() {
-        this.results = document.querySelector('.results');
-        this.armorPieces = document.querySelector('.pieces');
+    constructor(results) {
+        this.results = document.querySelector(results);
+        // this.armorPieces = document.querySelector('.pieces');
+    }
+
+    displayAilments(ailments) {
+        let output = '';
+
+        ailments.forEach(ailment => {
+            const ailments = new Ailments();
+
+            let recoverActions = ailments.getRecoveryActions(ailment.recovery.actions),
+                recoverItems = ailments.getRecoveryItems(ailment.recovery.items),
+                protectionItems = ailments.getProtectionItems(ailment.protection.items),
+                protectionSkills = ailments.getProtectionSkills(ailment.protection.skills);
+
+            output += `
+                <li>
+                    <button  class="title">${ailment.name}</button>
+                    <div class="content">
+                        <p>${ailment.description}</p>
+                        ${ailment.recovery.actions.length > 0 ? `<ul>${recoverActions}</ul>` : ''}
+                        ${ailment.recovery.items.length > 0 ? `<ul>${recoverItems}</ul>` : ''}
+                        ${ailment.protection.items.length > 0 ? `<ul>${protectionItems}</ul>` : ''}
+                        ${ailment.protection.skills.length > 0 ? `<ul>${protectionSkills}</ul>` : ''}
+                    </div>
+                </li>
+            `;
+        });
+
+        this.results.innerHTML = output;
+
     }
 
     armourFullSet(armorSet) {
@@ -35,14 +64,11 @@ class Ui {
     }
 }
 
-const mh = new MhApi();
-const ui = new Ui();
-
-mh.getAilments()
-.then(data => {
-    console.log(data.ailments);
-    // ui.showArmorPieces(data.armorSet.pieces);
-})
-.catch(error => {
-    console.log(error.status);
-})
+// mh.getAilments()
+// .then(data => {
+//     console.log(data.ailments);
+//     // ui.showArmorPieces(data.armorSet.pieces);
+// })
+// .catch(error => {
+//     console.log(error.status);
+// })
