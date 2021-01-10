@@ -45,8 +45,11 @@
     width: 100%;
     list-style: none;
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
 }
 
-.page__results li {
-    width: 100%;
+.page__results > li {
+    border: 1px solid #000;
 }
