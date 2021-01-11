@@ -17,13 +17,13 @@ class Ui {
 
             output += `
                 <li>
-                    <button  class="title">${ailment.name}</button>
+                    <button data-ailment-id="${ailment.id}" class="title">${ailment.name}</button>
                     <div class="content">
                         <p>${ailment.description}</p>
-                        ${ailment.recovery.actions.length > 0 ? `<ul>${recoverActions}</ul>` : ''}
-                        ${ailment.recovery.items.length > 0 ? `<ul>${recoverItems}</ul>` : ''}
-                        ${ailment.protection.items.length > 0 ? `<ul>${protectionItems}</ul>` : ''}
-                        ${ailment.protection.skills.length > 0 ? `<ul>${protectionSkills}</ul>` : ''}
+                        ${ailment.recovery.actions.length > 0 ? `<h4>Recovery Actions</h4><ul class="info">${recoverActions}</ul>` : ''}
+                        ${ailment.recovery.items.length > 0 ? `<h4>Recovery Items</h4><ul class="info">${recoverItems}</ul>` : ''}
+                        ${ailment.protection.items.length > 0 ? `<h4>Protection Items</h4><ul class="info">${protectionItems}</ul>` : ''}
+                        ${ailment.protection.skills.length > 0 ? `<h4>Protection Skills</h4><ul class="info">${protectionSkills}</ul>` : ''}
                     </div>
                 </li>
             `;

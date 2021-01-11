@@ -6,8 +6,11 @@ class Ailments {
         let ailmentAction = '';
 
         actions.forEach(action => {
+
             ailmentAction += `
-                <li>${action}</li>
+                <li>
+                    <p><strong>Action:</strong> ${action}</p>
+                </li>
             `;
         });
 
@@ -20,11 +23,11 @@ class Ailments {
         items.forEach(item => {
             ailmentRecoveryItem += `
                 <li>
-                    <p>${item.name}</p>
-                    <p>${item.description}</p>
-                    <p>${item.rarity}</p>
-                    <p>${item.value}</p>
-                    <p>${item.carryLimit}</p>
+                    <p><strong>Name:</strong> ${item.name}</p>
+                    <p><strong>Description:</strong> ${item.description}</p>
+                    <p><strong>Rarity:</strong> ${item.rarity}</p>
+                    <p><strong>Value:</strong> ${item.value}z</p>
+                    <p><strong>Carry Limit:</strong> ${item.carryLimit}</p>
                 </li>
             `;
         });
@@ -38,11 +41,11 @@ class Ailments {
         items.forEach(item => {
             ailmentProtectionItem += `
                 <li>
-                    <p>${item.name}</p>
-                    <p>${item.description}</p>
-                    <p>${item.rarity}</p>
-                    <p>${item.value}</p>
-                    <p>${item.carryLimit}</p>
+                    <p><strong>Name:</strong> ${item.name}</p>
+                    <p><strong>Description:</strong> ${item.description}</p>
+                    <p><strong>Rarity:</strong> ${item.rarity}</p>
+                    <p><strong>Value:</strong> ${item.value}z</p>
+                    <p><strong>Carry Limit:</strong> ${item.carryLimit}</p>
                 </li>
             `;
         });
@@ -56,8 +59,8 @@ class Ailments {
         skills.forEach(skill => {
             ailmentProtectionSkills += `
                 <li>
-                    <p>${skill.name}</p>
-                    <p>${skill.description}</p>
+                    <p><strong>Name:</strong> ${skill.name}</p>
+                    <p><strong>Description:</strong> ${skill.description}</p>
                 </li>
             `;
         });
