@@ -1,3 +1,12 @@
+:root {
+    --primary-c: #FFCB08;
+    --primary-c-alt: #6AB417;
+    --secondary-c: #00DAFF;
+    --secondary-c-alt: #FF4AB4;
+    --acent-c: #00BCA3;
+    --acent-c-alt: #00F6DA;
+}
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -65,6 +74,13 @@ p {
     padding: 30px;
     border-radius: 10px;
     font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.page__results > li .content {
+    flex-grow: 1;
 }
 
 .info {
@@ -89,4 +105,19 @@ p {
 
 .info li p {
     margin: 0;
+}
+
+.button {
+    width: 100%;
+    background-color: var(--acent-c);
+    border-color: var(--acent-c);
+    font-size: 16px;
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+.button:hover {
+    background-color: transparent;
+    border-color: var(--acent-c);
+    color: var(--acent-c);
 }

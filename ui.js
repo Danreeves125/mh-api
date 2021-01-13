@@ -17,21 +17,25 @@ class Ui {
 
             output += `
                 <li>
-                    <button data-ailment-id="${ailment.id}" class="title">${ailment.name}</button>
+                    <h2 data-ailment-id="${ailment.id}" class="title">${ailment.name}</h2>
                     <div class="content">
                         <p>${ailment.description}</p>
-                        ${ailment.recovery.actions.length > 0 ? `<h4>Recovery Actions</h4><ul class="info">${recoverActions}</ul>` : ''}
-                        ${ailment.recovery.items.length > 0 ? `<h4>Recovery Items</h4><ul class="info">${recoverItems}</ul>` : ''}
-                        ${ailment.protection.items.length > 0 ? `<h4>Protection Items</h4><ul class="info">${protectionItems}</ul>` : ''}
-                        ${ailment.protection.skills.length > 0 ? `<h4>Protection Skills</h4><ul class="info">${protectionSkills}</ul>` : ''}
                     </div>
+                    <button class="button">View Details</button>
                 </li>
             `;
         });
 
+
+
         this.results.innerHTML = output;
 
     }
+//
+//     ${ailment.recovery.actions.length > 0 ? `<h4>Recovery Actions</h4><ul class="info">${recoverActions}</ul>` : ''}
+// ${ailment.recovery.items.length > 0 ? `<h4>Recovery Items</h4><ul class="info">${recoverItems}</ul>` : ''}
+// ${ailment.protection.items.length > 0 ? `<h4>Protection Items</h4><ul class="info">${protectionItems}</ul>` : ''}
+// ${ailment.protection.skills.length > 0 ? `<h4>Protection Skills</h4><ul class="info">${protectionSkills}</ul>` : ''}
 
     armourFullSet(armorSet) {
         this.results.innerHTML = `
