@@ -15,8 +15,13 @@ class Ui {
                 protectionItems = ailments.getProtectionItems(ailment.protection.items),
                 protectionSkills = ailments.getProtectionSkills(ailment.protection.skills);
 
+            let imageNameToLower = ailment.name.toLowerCase(),
+                seoImageUrl = imageNameToLower.replace(' ', '-');
+
+
             output += `
-                <li>
+                <li class="page__result">
+                    <img src="blights/${seoImageUrl}.svg" alt="">
                     <h2 data-ailment-id="${ailment.id}" class="title">${ailment.name}</h2>
                     <div class="content">
                         <p>${ailment.description}</p>

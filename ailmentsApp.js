@@ -8,7 +8,3 @@ mh.getAilments()
     .catch(error => {
         console.log(error);
     });
-
-// document.addEventListener('click', (e) => {
-//     console.log(e.target.getAttribute('data-ailment-id'));
-// });
