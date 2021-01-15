@@ -1,10 +1,25 @@
 const mh = new MhApi();
-const ui = new Ui('.page__results');
+const ailment = new Ailments('.page__results');
+const ui = new Ui();
 
 mh.getAilments()
     .then(data => {
-        ui.displayAilments(data.ailments);
+        ailment.displayAilments(data.ailments);
     })
     .catch(error => {
         console.log(error);
     });
+
+document.addEventListener('click', (e) => {
+    if(e.target.classList.contains('view-details')) {
+        let ailmentId = e.target.getAttribute('data-ailment-id');
+
+        mh.getAilments(ailmentId)
+            .then(data => {
+                ailment.ailmentPopup(data.ailments);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+});
