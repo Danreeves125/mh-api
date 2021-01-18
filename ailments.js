@@ -8,18 +8,24 @@ class Ailments {
         // Show alert message
             // clear any remaining alerts
             this.clearPopup();
-            // Create di
-            const div = document.createElement('div');
-            // Add Classes
-            div.className = 'popup';
-            // add text
-            div.innerHTML = this.displaySingleAilment(ailment);
-            // Get Parent
+
+            const popupOverlay = document.createElement('div');
+
+            popupOverlay.className = 'popup-overlay';
+
+            const popup = document.createElement('div');
+
+            popup.className = 'popup';
+
+            popup.innerHTML = this.displaySingleAilment(ailment);
+
+            popupOverlay.appendChild(popup);
+
             const container = document.querySelector('body');
-            // Get search box
+
             const search = document.querySelector('.page');
-            // Insert Alert
-            container.insertBefore(div, search)
+
+            container.insertBefore(popupOverlay, search);
     }
 
     clearPopup() {
@@ -74,9 +80,8 @@ class Ailments {
 
 
         output = `
-            <li class="page__result">
-                <img src="blights/${seoImageUrl}.svg" alt="">
-                <h2 class="title">${ailment.name}</h2>
+            <div class="popup__inner">
+                <div class="popup__title"><img src="blights/${seoImageUrl}.svg" alt=""> ${ailment.name}</div>
                 <div class="content">
                     <p>${ailment.description}</p>
                 </div>
@@ -84,8 +89,7 @@ class Ailments {
                 ${ailment.recovery.items.length > 0 ? `<h4>Recovery Items</h4><ul class="info">${recoverItems}</ul>` : ''}
                 ${ailment.protection.items.length > 0 ? `<h4>Protection Items</h4><ul class="info">${protectionItems}</ul>` : ''}
                 ${ailment.protection.skills.length > 0 ? `<h4>Protection Skills</h4><ul class="info">${protectionSkills}</ul>` : ''}
-                <button class="button view-details" data-ailment-id="${ailment.id}">View Details</button>
-            </li>
+            </div>
         `;
 
         return output;
