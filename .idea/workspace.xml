@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bdb3d6e-d68f-4c21-9275-a75f89d19e4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/favicon/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon/mstile-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon/safari-pinned-tab.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/favicon/site.webmanifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ailments.html" beforeDir="false" afterPath="$PROJECT_DIR$/ailments.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ailments.js" beforeDir="false" afterPath="$PROJECT_DIR$/ailments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ailmentsApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/ailmentsApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +72,8 @@
       <workItem from="1610556901091" duration="1854000" />
       <workItem from="1610642275808" duration="2873000" />
       <workItem from="1610737214361" duration="4202000" />
-      <workItem from="1610915933857" duration="2781000" />
+      <workItem from="1610915933857" duration="3957000" />
+      <workItem from="1611094462962" duration="1140000" />
     </task>
     <servers />
   </component>

@@ -5,7 +5,7 @@ class Ailments {
     }
 
     ailmentPopup(ailment) {
-        // Show alert message
+            let popupClose = `<button aria-label="Popup Close">Close</button>`;
             // clear any remaining alerts
             this.clearPopup();
 
@@ -26,6 +26,7 @@ class Ailments {
             const search = document.querySelector('.page');
 
             container.insertBefore(popupOverlay, search);
+
     }
 
     clearPopup() {
@@ -80,6 +81,7 @@ class Ailments {
 
 
         output = `
+            <button class="popup__close" aria-label="Close Popup">Close</button>
             <div class="popup__inner">
                 <div class="popup__title"><img src="blights/${seoImageUrl}.svg" alt=""> ${ailment.name}</div>
                 <div class="content">
